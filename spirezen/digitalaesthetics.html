@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="SPIREZEN"
+        content="Discover SPIREZEN ENTERPRISES: Empowering students with dynamic learning experiences, fostering communication, collaboration, and success through innovative training programs. think. elevate. succeed." />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Spirezen Enterprises – Digital Aesthetics</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.svg" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/digitalaesthetics.css" />
+    <link rel="stylesheet" href="assets/css/digitalaesthetics_cta.css" />
+    <style>
+        /* Temporary placeholder styles */
+        .da-placeholder {
+            padding: 120px 0;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .da-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--gold-from), var(--gold-to));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== GLASS NAVBAR ===== -->
+    <!-- NAVBAR -->
+    <nav class="pro-nav" aria-label="Primary Navigation">
+        <div class="pro-nav__inner">
+            <!-- LEFT: Brand -->
+            <a href="index" class="pro-nav__brand" aria-label="Spirezen Home">SPIREZEN</a>
+
+            <!-- CENTER: Menu (desktop) -->
+            <ul class="pro-nav__menu" role="menubar">
+                <li role="none"><a role="menuitem" class="pro-nav__link" href="index">Home</a></li>
+
+                <li class="pro-has-dd" role="none">
+                    <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                        <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M7 10l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="pro-dd" role="menu">
+                        <a class="pro-dd__link" role="menuitem" href="munworkshop">Munterra</a>
+                        <a class="pro-dd__link" role="menuitem" href="digitalaesthetics">Digital Aesthetics </a>
+                    </div>
+                </li>
+
+                <li class="pro-has-dd" role="none">
+                    <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+                        Services
+                        <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M7 10l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="pro-dd" role="menu">
+                        <a class="pro-dd__link" role="menuitem" href="thedalemunclub">thedalemunclub</a>
+                        <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+                    </div>
+                </li>
+
+                <li class="pro-has-dd" role="none">
+                    <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+                        Portfolio
+                        <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M7 10l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="pro-dd" role="menu">
+                        <a class="pro-dd__link" role="menuitem" href="thedalemunclub">thedalemun</a>
+                        <a class="pro-dd__link" role="menuitem" href="thedalewordweft">thedalewordweft</a>
+                        <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+                    </div>
+                </li>
+
+                <li role="none"><a role="menuitem" class="pro-nav__link" href="about">About Us</a></li>
+
+                <li class="pro-has-dd" role="none">
+                    <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+                        Get in touch
+                        <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M7 10l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="pro-dd" role="menu">
+                        <a class="pro-dd__link" role="menuitem" href="career">Careers</a>
+                        <a class="pro-dd__link" role="menuitem" href="contact">Contact us</a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- RIGHT: Logo -->
+            <a href="index" class="pro-nav__logoWrap" aria-label="Spirezen Home">
+                <img src="assets/img/logo.svg" alt="" class="pro-nav__logo" />
+            </a>
+
+            <!-- Mobile trigger -->
+            <button class="pro-hamburger" id="proHamburger" aria-label="Open menu" aria-controls="proDrawer"
+                aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="pro-underline" aria-hidden="true"></div>
+    </nav>
+
+    <!-- ===== Overlay & Bottom Sheet MUST be direct children of <body> ===== -->
+    <div class="pro-overlay" id="proOverlay" hidden></div>
+
+    <aside class="pro-sheet" id="proDrawer" aria-hidden="true" aria-label="Mobile Menu">
+        <!-- Top bar for drag + close -->
+        <div class="pro-sheet__head">
+            <div class="pro-sheet__brand">
+                <img src="assets/img/logo.svg" class="pro-sheet__logo" alt="">
+                <strong class="pro-sheet__title">SPIREZEN</strong>
+            </div>
+            <button id="proClose" class="pro-sheet__close" aria-label="Close menu">✕</button>
+        </div>
+        <div class="pro-sheet__handle" aria-hidden="true"></div>
+
+        <!-- Menu Body -->
+        <nav class="pro-sheet__body" role="menu">
+            <!-- ✅ Home first -->
+            <a class="pro-sheet__item" href="index" role="menuitem">Home</a>
+
+            <details class="pro-sheet__acc" role="none">
+                <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Courses</summary>
+                <div class="pro-sheet__panel">
+                    <a class="pro-sheet__sub" href="munworkshop">Munterra</a>
+                    <a class="pro-sheet__sub" href="digitalaesthetics">Digital Aesthetics </a>
+                </div>
+            </details>
+
+            <details class="pro-sheet__acc" role="none">
+                <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Services</summary>
+                <div class="pro-sheet__panel">
+                    <a class="pro-sheet__sub" href="thedalewordweft">daleworldweft</a>
+                    <a class="pro-sheet__sub" href="digitalservices">thedalediginova</a>
+                </div>
+            </details>
+
+            <details class="pro-sheet__acc" role="none">
+                <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Portfolio</summary>
+                <div class="pro-sheet__panel">
+                    <a class="pro-sheet__sub" href="thedalemunclub">thedalemun</a>
+                    <a class="pro-sheet__sub" href="thedalewordweft">thedalewordweft</a>
+                    <a class="pro-sheet__sub" href="digitalservices">thedalediginova</a>
+                </div>
+            </details>
+
+            <a class="pro-sheet__item" href="about" role="menuitem">About Us</a>
+
+            <details class="pro-sheet__acc" role="none">
+                <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Get in touch</summary>
+                <div class="pro-sheet__panel">
+                    <a class="pro-sheet__sub" href="career">Careers</a>
+                    <a class="pro-sheet__sub" href="contact">Contact Us</a>
+                </div>
+            </details>
+        </nav>
+
+        <!-- Footer -->
+        <div class="pro-sheet__footer">
+            <a href="mailto:hello@spirezen.com" class="footer-link"> spirecare@spirezenenterprises.com</a>
+            <div class="footer-links">
+                <a href="about">About</a>
+                <span class="dot">•</span>
+                <a href="careers">Careers</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ===== PAGE OFFSET (for fixed nav) ===== -->
+    <div class="page-offset"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- SECTION 1: HERO -->
+        <section class="da-hero">
+            <div class="dw-wrap da-hero__grid">
+                <!-- Text Content -->
+                <div class="da-hero__content fade-up">
+                    <span class="da-chip-gold">New Workshop</span>
+                    <h1 class="da-heading-xl da-hero__title">
+                        Empowering students to speak, lead & succeed.
+                    </h1>
+                    <p class="da-hero__desc">
+                        A premium hands-on workshop teaching design fundamentals, branding basics,
+                        and social-media visual creation — all distilled into a powerful 3-hour experience.
+                    </p>
+                    <div class="da-actions">
+                        <a href="digitalaestheticsregistration" class="da-btn-primary">Enroll Now</a>
+                        <a href="#breakdown" class="da-btn-glass">View Course Breakdown</a>
+                    </div>
+                </div>
+
+                <!-- Visual Content -->
+                <div class="da-hero__visual fade-up delay-200">
+                    <!-- Main Visual -->
+                    <div class="da-glass-card vis-main" style="padding: 10px; background: rgba(5,5,5,0.4);">
+                        <img src="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?auto=format&fit=crop&q=80&w=800"
+                            alt="Digital Aesthetics Abstract"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; filter: brightness(0.9) contrast(1.1);">
+                    </div>
+
+                    <!-- Floating Element 1 -->
+                    <div class="da-glass-card vis-float-1" style="padding: 0; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400"
+                            alt="Gold Fluid Texture" style="width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+
+                    <!-- Floating Element 2 -->
+                    <div class="da-glass-card vis-float-2" style="padding: 0; overflow: hidden;">
+                        <img src="assets/img/thedalewordweft.svg" alt="thedalewordweft.svg"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT -->
+        <section class="da-about">
+            <div class="dw-wrap">
+                <div class="da-card-glass fade-up">
+                    <div class="da-about__grid">
+                        <div class="da-about__text">
+                            <span class="da-chip-gold" style="margin-bottom: 16px;">Overview</span>
+                            <h2 class="da-about__title">Logic Meets Imagination</h2>
+                            <p style="color: #ccc; line-height: 1.7;">
+                                Digital aesthetics isn't just about making things look "pretty"—it's about intentional
+                                design,
+                                branding coherence, and visual storytelling. This workshop bridges the gap between raw
+                                creativity
+                                and professional execution.
+                            </p>
+                            <div class="da-about__list">
+                                <div class="da-about__item">
+                                    <svg class="da-icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Perfect for beginners & creators</span>
+                                </div>
+                                <div class="da-about__item">
+                                    <svg class="da-icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Practical, tool-based learning</span>
+                                </div>
+                                <div class="da-about__item">
+                                    <svg class="da-icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Immediate portfolio outcome</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="da-about__visual" style="text-align: center;">
+                            <div style="display: inline-block; position: relative;">
+                                <div
+                                    style="width: 280px; height: 360px; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; transform: rotate(-3deg);">
+                                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=600"
+                                        alt="Minimal Workspace"
+                                        style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) brightness(0.8);">
+                                </div>
+                                <div
+                                    style="width: 260px; height: 340px; border: 1px solid rgba(238, 193, 103, 0.4); border-radius: 16px; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); position: absolute; top: 20px; left: 40px; transform: rotate(3deg); overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=600"
+                                        alt="Creative Design"
+                                        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WHAT YOU'LL LEARN -->
+        <section class="da-learn">
+            <div class="dw-wrap">
+                <h2 class="da-section-title da-title-underline fade-up">What You'll Learn</h2>
+
+                <div class="da-grid-3 fade-up delay-100">
+                    <!-- 1 -->
+                    <div class="da-learn-card">
+                        <div class="da-learn-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                        </div>
+                        <h3>Design Foundations</h3>
+                        <p>Master typography, spacing, hierarchy, and grid systems. Learn why some layouts work and
+                            others fail.</p>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="da-learn-card">
+                        <div class="da-learn-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>Brand Identity</h3>
+                        <p>Understand logo usage, color psychology, and how to create a consistent visual language.</p>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="da-learn-card">
+                        <div class="da-learn-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <h3>Social Media Visuals</h3>
+                        <p>Create high-impact carousels, stories, and reels covers that stop the scroll.</p>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="da-learn-card">
+                        <div class="da-learn-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>Tools & Workflow</h3>
+                        <p>Get hands-on with tools like Figma or Canva. Learn efficient workflows for batch creation.
+                        </p>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="da-learn-card">
+                        <div class="da-learn-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Visual Storytelling</h3>
+                        <p>Align your visuals with your message. Learn to guide the viewer's eye through composition.
+                        </p>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="da-learn-card">
+                        <div class="da-learn-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Practical Projects</h3>
+                        <p>Don't just listen—build. You'll create a moodboard and a polished social post during the
+                            session.</p>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="da-learn-card">
+                        <div class="da-learn-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path>
+                                <path d="M12 22a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2 2 2 0 0 1 2 2v2a2 2 0 0 1-2 2z"></path>
+                                <path d="M20 12a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2 2 2 0 0 1 2-2h2a2 2 0 0 1 2 2z"></path>
+                                <path d="M6 12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2 2 2 0 0 1 2-2h2a2 2 0 0 1 2 2z"></path>
+                                <rect x="9" y="9" width="6" height="6" rx="1"></rect>
+                            </svg>
+                        </div>
+                        <h3>AI-Enhanced Design</h3>
+                        <p>Leverage AI tools to speed up brainstorming, asset generation, and variations without losing
+                            your creative soul.</p>
+                    </div>
+
+                    <!-- 8 -->
+                    <div class="da-learn-card">
+                        <div class="da-learn-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3>Monetizing Skills</h3>
+                        <p>Turn your new aesthetic skills into income. Learn how to package, price, and pitch your
+                            design services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SESSION BREAKDOWN (TIMELINE) -->
+        <section id="breakdown" class="da-timeline-sec">
+            <div class="dw-wrap">
+                <h2 class="da-section-title da-title-underline fade-up">3-Hour Session Breakdown</h2>
+
+                <div class="da-timeline fade-up delay-100">
+                    <!-- Item 1 -->
+                    <div class="da-timeline-item">
+                        <div class="da-timeline-marker"></div>
+                        <div class="da-time-card">
+                            <span class="da-time-label">0:00 – 0:10</span>
+                            <h3 class="da-time-title">Introduction & Warm-up</h3>
+                            <p class="da-time-desc">Overview of the session goals, quick introductions, and analyzing
+                                good vs. bad design examples.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="da-timeline-item">
+                        <div class="da-timeline-marker"></div>
+                        <div class="da-time-card">
+                            <span class="da-time-label">0:10 – 0:45</span>
+                            <h3 class="da-time-title">Design Foundations</h3>
+                            <p class="da-time-desc">Deep dive into typography, color theory, grid layouts, and visual
+                                hierarchy.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="da-timeline-item">
+                        <div class="da-timeline-marker"></div>
+                        <div class="da-time-card">
+                            <span class="da-time-label">0:45 – 1:20</span>
+                            <h3 class="da-time-title">Branding Essentials</h3>
+                            <p class="da-time-desc">Creating a cohesive identity system. Mini case study on visual
+                                language.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="da-timeline-item">
+                        <div class="da-timeline-marker"></div>
+                        <div class="da-time-card">
+                            <span class="da-time-label">1:20 – 1:30</span>
+                            <h3 class="da-time-title">Break</h3>
+                            <p class="da-time-desc">Short recharge.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="da-timeline-item">
+                        <div class="da-timeline-marker"></div>
+                        <div class="da-time-card">
+                            <span class="da-time-label">1:30 – 2:10</span>
+                            <h3 class="da-time-title">Social Media & Storytelling</h3>
+                            <p class="da-time-desc">Translating brand into content. Storytelling exercise for
+                                engagement.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="da-timeline-item">
+                        <div class="da-timeline-marker"></div>
+                        <div class="da-time-card">
+                            <span class="da-time-label">2:10 – 2:40</span>
+                            <h3 class="da-time-title">Tools & Creation</h3>
+                            <p class="da-time-desc">Live demo of Figma/Canva workflows. Creating a real post from
+                                scratch.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="da-timeline-item">
+                        <div class="da-timeline-marker"></div>
+                        <div class="da-time-card">
+                            <span class="da-time-label">2:40 – 3:00</span>
+                            <h3 class="da-time-title">Review & Wrap-up</h3>
+                            <p class="da-time-desc">Q&A, resource pack distribution, and final feedback.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MODULES SHOWCASE -->
+        <section class="da-modules">
+            <div class="dw-wrap">
+                <h2 class="da-section-title da-title-underline fade-up">Detailed Modules</h2>
+
+                <div class="da-modules__grid fade-up delay-100">
+                    <!-- Mod 1 -->
+                    <div class="da-module-card">
+                        <span class="da-mod-num">01</span>
+                        <h3 class="da-mod-title">Design Foundations</h3>
+                        <p class="da-mod-desc">The non-negotiable rules of composition and aesthetics.</p>
+                    </div>
+                    <!-- Mod 2 -->
+                    <div class="da-module-card">
+                        <span class="da-mod-num">02</span>
+                        <h3 class="da-mod-title">Tools Mastery</h3>
+                        <p class="da-mod-desc">Shortcuts, plugins, and hacks for Figma & Canva.</p>
+                    </div>
+                    <!-- Mod 3 -->
+                    <div class="da-module-card">
+                        <span class="da-mod-num">03</span>
+                        <h3 class="da-mod-title">Branding</h3>
+                        <p class="da-mod-desc">Identity systems that scale beyond just a logo.</p>
+                    </div>
+                    <!-- Mod 4 -->
+                    <div class="da-module-card">
+                        <span class="da-mod-num">04</span>
+                        <h3 class="da-mod-title">Social Visuals</h3>
+                        <p class="da-mod-desc">Designing for the algorithm and the human eye.</p>
+                    </div>
+                    <!-- Mod 5 -->
+                    <div class="da-module-card">
+                        <span class="da-mod-num">05</span>
+                        <h3 class="da-mod-title">Storytelling</h3>
+                        <p class="da-mod-desc">Narrative structures in visual formats.</p>
+                    </div>
+                    <!-- Mod 6 -->
+                    <div class="da-module-card">
+                        <span class="da-mod-num">06</span>
+                        <h3 class="da-mod-title">Portfolio Build</h3>
+                        <p class="da-mod-desc">Creating assets you can actually show clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: WHY THIS WORKSHOP MATTERS -->
+        <section class="da-matters">
+            <div class="dw-wrap">
+                <h2 class="da-section-title da-title-underline fade-up">Why It Matters</h2>
+
+                <div class="da-matters__list fade-up delay-100">
+                    <div class="da-matters-card">
+                        <div class="da-matter-item">
+                            <h3>Build a Real Aesthetic Sense</h3>
+                            <p>Move beyond templates. Understand why certain colors, fonts, and layouts evoke specific
+                                emotions.</p>
+                        </div>
+                    </div>
+                    <div class="da-matters-card">
+                        <div class="da-matter-item">
+                            <h3>Professional Polish</h3>
+                            <p>Elevate your personal brand or client work. Small details make the difference between
+                                amateur and premium.</p>
+                        </div>
+                    </div>
+                    <div class="da-matters-card">
+                        <div class="da-matter-item">
+                            <h3>Portfolio Ready</h3>
+                            <p>Walk away with assets you can use immediately. No theory-only fluff; we build real
+                                things.</p>
+                        </div>
+                    </div>
+                    <div class="da-matters-card">
+                        <div class="da-matter-item">
+                            <h3>Career Edge</h3>
+                            <p>Whether you're a student, freelancer, or founder, visual communication is a top-tier soft
+                                skill.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: TAKEAWAYS (Comparison/Outputs) -->
+        <section class="da-takeaways">
+            <div class="dw-wrap">
+                <h2 class="da-section-title da-title-underline fade-up">Your Outputs</h2>
+                <p style="color:var(--text-secondary); max-width: 600px; margin-bottom: 20px;">
+                    By the end of the session, you'll have created:
+                </p>
+
+                <div class="da-takeaways__grid fade-up delay-100">
+                    <!-- 1 -->
+                    <div class="da-takeaway-card">
+                        <span class="da-takeaway-label">Visual Identity</span>
+                        <div class="da-takeaway-preview" style="padding: 0; overflow: hidden; border: none;">
+                            <img src="assets/img/visual_identity_card.png" alt="Moodboard"
+                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                        </div>
+                        <p style="font-size: 0.9rem; color: #ccc;">A curated moodboard defining your personal or brand
+                            aesthetic.</p>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="da-takeaway-card">
+                        <span class="da-takeaway-label">Social Media Asset</span>
+                        <div class="da-takeaway-preview" style="padding: 0; overflow: hidden; border: none;">
+                            <img src="assets/img/social_media_asset_card.png" alt="Instagram Post"
+                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                        </div>
+                        <p style="font-size: 0.9rem; color: #ccc;">A high-fidelity social media post or carousel ready
+                            to publish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: FAQ (Reusing dw-faq styles) -->
+        <section class="dw-faq" id="faq-section">
+            <div class="dw-wrap">
+                <h2 class="da-section-title da-title-underline fade-up">Common Questions</h2>
+
+                <!-- FAQ 1 -->
+                <article class="dw-faq__item fade-up">
+                    <button class="dw-faq__q" type="button" aria-expanded="false">
+                        <span class="dw-faq__num">01</span>
+                        <span class="dw-faq__label">
+                            <span class="dw-faq__text">Is this suitable for absolute beginners?</span>
+                        </span>
+                        <span class="dw-faq__chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="dw-faq__a">
+                        <p>Yes! We start from the very basics of design theory and tool usage. No prior design
+                            experience is required.</p>
+                    </div>
+                </article>
+
+                <!-- FAQ 2 -->
+                <article class="dw-faq__item fade-up">
+                    <button class="dw-faq__q" type="button" aria-expanded="false">
+                        <span class="dw-faq__num">02</span>
+                        <span class="dw-faq__label">
+                            <span class="dw-faq__text">What tools do I need?</span>
+                        </span>
+                        <span class="dw-faq__chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="dw-faq__a">
+                        <p>A laptop and a free account on Figma or Canva. We will guide you through setting these up.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FAQ 3 -->
+                <article class="dw-faq__item fade-up">
+                    <button class="dw-faq__q" type="button" aria-expanded="false">
+                        <span class="dw-faq__num">03</span>
+                        <span class="dw-faq__label">
+                            <span class="dw-faq__text">Will there be a recording?</span>
+                        </span>
+                        <span class="dw-faq__chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="dw-faq__a">
+                        <p>Yes, all registered participants will receive a recording of the session along with the
+                            resource pack.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 9: CONTACT / REGISTER -->
+        <!-- SECTION 9: CTA (PREMIUM) -->
+        <section class="da-cta-premium" id="register">
+            <div class="da-cta-spotlight"></div>
+
+            <div class="dw-wrap">
+                <div class="da-cta-container fade-up">
+                    <h2 class="da-cta-title">Secure Your Spot</h2>
+                    <p class="da-cta-desc">
+                        Limited seats available. Join the next cohort and elevate your digital presence.
+                    </p>
+
+                    <div class="fade-up delay-200">
+                        <a href="digitalaestheticsregistration" class="da-btn-premium">
+                            Register Now
+                        </a>
+                    </div>
+
+                    <div class="da-cta-note fade-up delay-300">
+                        Registration takes only 2 minutes
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GLASS FOOTER ===== -->
+        <!-- ===== GLASS FOOTER ===== -->
+<!-- ===== GLASS FOOTER ===== -->
+<footer class="footer-container" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="visually-hidden">Site Footer</h2>
+
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <!-- Left: About Section -->
+            <section class="footer-col footer-about" aria-labelledby="about-title">
+                <img src="assets/img/logo.svg" alt="Spirezen Logo" class="logofooter" />
+                <h3 id="about-title" class="visually-hidden">About Spirezen</h3>
+                <p class="footer-about-text">
+                    At Spirezen Enterprises, we inspire excellence through education,
+                    growth, and innovation. Founded with the mission to elevate minds
+                    and empower futures, our team is committed to redefining learning
+                    experiences in India and beyond.
+                </p>
+            </section>
+
+            <!-- Center: Quick Links (collapsible on small screens) -->
+            <nav class="footer-col footer-links" aria-labelledby="links-title">
+                <div class="links-head">
+                    <h4 id="links-title">QUICK LINKS</h4>
+                    <button class="links-toggle" aria-expanded="false" aria-controls="quick-links-list"
+                        aria-label="Toggle quick links">
+                        ▾
+                    </button>
+                </div>
+                <ul id="quick-links-list" class="quick-links" role="navigation">
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="about">ABOUT US</a></li>
+                    <li><a href="team">OUR TEAM</a></li>
+                    <li><a href="portfolio">PORTFOLIO</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+                    <li><a href="join">JOIN US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right: Address & Contact -->
+            <section class="footer-col footer-contact" aria-labelledby="contact-title">
+                <h4 id="contact-title">OUR CORPORATE ADDRESS</h4>
+                <address class="footer-address">
+                    SPIREZEN ENTERPRISES Pvt Ltd.<br />
+                    JS Bakers, Uliyampalayam,<br />
+                    Thondamuthur, Coimbatore, Tamil Nadu, India — 641109
+                </address>
+
+                <h4>MAIL US</h4>
+                <p>
+                    <a class="footer-email" href="mailto:spirecare@spirezenenterprises.com">
+                        spirecare@spirezenenterprises.com
+                    </a>
+                </p>
+
+                <div class="social-media" aria-label="Social links">
+                    <a class="social-link" href="https://www.instagram.com/spirezenenterprises" target="_blank"
+                        rel="noopener" aria-label="Instagram">
+                        <img src="assets/img/instatosvg.svg" alt="Instagram" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="Facebook">
+                        <img src="assets/img/facetosvg.svg" alt="Facebook" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="https://x.com/Spirezen" target="_blank" rel="noopener"
+                        aria-label="Twitter">
+                        <img src="assets/img/xtosvg.svg" alt="Twitter" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <img src="assets/img/linkedintosvg.svg" alt="LinkedIn" class="social-icon" />
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="current-year"></span>
+                <span class="highlight">SPIREZEN ENTERPRISES Pvt Ltd.</span>, ALL
+                RIGHTS RESERVED.
+            </p>
+            <button class="back-to-top" aria-label="Back to top">↑</button>
+        </div>
+    </div>
+</footer>
+
+        <script src="assets/js/digitalaesthetics.js"></script>
+        <script src="assets/js/nav.js"></script>
+        <script src="assets/js/footer.js"></script>
+        <!-- Updated: Sync Check -->
+</body>
+
+</html>

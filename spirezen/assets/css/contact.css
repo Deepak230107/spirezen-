@@ -1,0 +1,145 @@
+/* =========================
+   CONTACT — EDITORIAL STYLE
+========================= */
+
+.contact_editorial {
+  padding: clamp(80px, 12vw, 160px) 0;
+}
+
+/* WRAP */
+.editorial_wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* COPY */
+.editorial_copy {
+  padding-right: 40px;
+}
+
+.editorial_title {
+  font-size: clamp(3.2rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.editorial_lead {
+  font-size: 1.15rem;
+  color: #ffffff;
+  opacity: 0.85;
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+
+.editorial_text {
+  font-size: 0.95rem;
+  color: #ffffff;
+  opacity: 0.7;
+  max-width: 480px;
+}
+
+/* FORM AREA */
+.editorial_form {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding-left: 40px;
+}
+
+/* FORM */
+.contact_form--stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* GROUP */
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  /* specific for potential floating element positioning */
+}
+
+/* LABELS — STRONG WHITE */
+.form_group label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+}
+
+/* INPUTS */
+.contact_input,
+.contact_textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #ffffff;
+  width: 100%;
+  /* Ensure full width */
+  font-family: inherit;
+}
+
+.contact_input:focus,
+.contact_textarea:focus {
+  outline: none;
+  border-bottom-color: rgba(238, 192, 99, 0.9);
+}
+
+/* TEXTAREA */
+.contact_textarea {
+  resize: none;
+  min-height: 140px;
+}
+
+/* BUTTON */
+.contact_btn {
+  margin-top: 10px;
+  align-self: flex-start;
+  padding: 12px 32px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f3e3c3, #eec063);
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  color: #000;
+  /* Ensure text is readable on gold */
+}
+
+/* STATUS */
+.contact_form-message {
+  margin-top: 14px;
+  color: #ffffff;
+}
+
+/* ERRORS */
+.field_error {
+  font-size: 0.75rem;
+  color: #ffb3b3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .editorial_wrap {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 0 20px;
+    /* Add some side padding on mobile */
+  }
+
+  .editorial_form {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .editorial_copy {
+    padding-right: 0;
+  }
+}

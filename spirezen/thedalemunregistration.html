@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Spirezen Enterprises.</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.svg">
+  <link rel="stylesheet" type="text/css" target="_blank" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="assets/css/thedalemunregis.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="pro-nav" aria-label="Primary Navigation">
+    <div class="pro-nav__inner">
+      <!-- LEFT: Brand -->
+      <a href="index" class="pro-nav__brand" aria-label="Spirezen Home">SPIREZEN</a>
+
+      <!-- CENTER: Menu (desktop) -->
+      <ul class="pro-nav__menu" role="menubar">
+        <li role="none"><a role="menuitem" class="pro-nav__link" href="index">Home</a></li>
+
+        <li class="pro-has-dd" role="none">
+          <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+            Courses
+            <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5" />
+            </svg>
+          </button>
+          <div class="pro-dd" role="menu">
+            <a class="pro-dd__link" role="menuitem" href="munworkshop">Munterra</a>
+            <a class="pro-dd__link" role="menuitem" href="digitalaesthetics">Digital Aesthetics </a>
+          </div>
+        </li>
+
+        <li class="pro-has-dd" role="none">
+          <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+            Services
+            <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5" />
+            </svg>
+          </button>
+          <div class="pro-dd" role="menu">
+            <a class="pro-dd__link" role="menuitem" href="thedalemunclub">thedalemunclub</a>
+            <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+          </div>
+        </li>
+
+        <li class="pro-has-dd" role="none">
+          <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+            Portfolio
+            <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5" />
+            </svg>
+          </button>
+          <div class="pro-dd" role="menu">
+            <a class="pro-dd__link" role="menuitem" href="thedalemunclub">thedalemun</a>
+            <a class="pro-dd__link" role="menuitem" href="thedalewordweft">thedalewordweft</a>
+            <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+          </div>
+        </li>
+
+        <li role="none"><a role="menuitem" class="pro-nav__link" href="about">About Us</a></li>
+
+        <li class="pro-has-dd" role="none">
+          <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+            Get in touch
+            <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5" />
+            </svg>
+          </button>
+          <div class="pro-dd" role="menu">
+            <a class="pro-dd__link" role="menuitem" href="career">Careers</a>
+            <a class="pro-dd__link" role="menuitem" href="contact">Contact us</a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- RIGHT: Logo -->
+      <a href="index" class="pro-nav__logoWrap" aria-label="Spirezen Home">
+        <img src="assets/img/logo.svg" alt="" class="pro-nav__logo" />
+      </a>
+
+      <!-- Mobile trigger -->
+      <button class="pro-hamburger" id="proHamburger" aria-label="Open menu" aria-controls="proDrawer"
+        aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="pro-underline" aria-hidden="true"></div>
+  </nav>
+
+  <!-- ===== Overlay & Bottom Sheet MUST be direct children of <body> ===== -->
+  <div class="pro-overlay" id="proOverlay" hidden></div>
+
+  <aside class="pro-sheet" id="proDrawer" aria-hidden="true" aria-label="Mobile Menu">
+    <!-- Top bar for drag + close -->
+    <div class="pro-sheet__head">
+      <div class="pro-sheet__brand">
+        <img src="assets/img/logo.svg" class="pro-sheet__logo" alt="">
+        <strong class="pro-sheet__title">SPIREZEN</strong>
+      </div>
+      <button id="proClose" class="pro-sheet__close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="pro-sheet__handle" aria-hidden="true"></div>
+
+    <!-- Menu Body -->
+    <nav class="pro-sheet__body" role="menu">
+      <!-- ✅ Home first -->
+      <a class="pro-sheet__item" href="index" role="menuitem">Home</a>
+
+      <details class="pro-sheet__acc" role="none">
+        <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Courses</summary>
+        <div class="pro-sheet__panel">
+          <a class="pro-sheet__sub" href="munworkshop">Munterra</a>
+          <a class="pro-sheet__sub" href="digitalaesthetics">Digital Aesthetics </a>
+        </div>
+      </details>
+
+      <details class="pro-sheet__acc" role="none">
+        <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Services</summary>
+        <div class="pro-sheet__panel">
+          <a class="pro-sheet__sub" href="thedalewordweft">daleworldweft</a>
+          <a class="pro-sheet__sub" href="digitalservices">thedalediginova</a>
+        </div>
+      </details>
+
+      <details class="pro-sheet__acc" role="none">
+        <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Portfolio</summary>
+        <div class="pro-sheet__panel">
+          <a class="pro-sheet__sub" href="thedalemunclub">thedalemun</a>
+          <a class="pro-sheet__sub" href="thedalewordweft">thedalewordweft</a>
+          <a class="pro-sheet__sub" href="digitalservices">thedalediginova</a>
+        </div>
+      </details>
+
+      <a class="pro-sheet__item" href="about" role="menuitem">About Us</a>
+
+      <details class="pro-sheet__acc" role="none">
+        <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Get in touch</summary>
+        <div class="pro-sheet__panel">
+          <a class="pro-sheet__sub" href="career">Careers</a>
+          <a class="pro-sheet__sub" href="contact">Contact Us</a>
+        </div>
+      </details>
+    </nav>
+
+    <!-- Footer -->
+    <div class="pro-sheet__footer">
+      <a href="mailto:hello@spirezen.com" class="footer-link"> spirecare@spirezenenterprises.com</a>
+      <div class="footer-links">
+        <a href="about">About</a>
+        <span class="dot">•</span>
+        <a href="careers">Careers</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================
+     MUNTERRA WORKSHOP FORM SECTION
+     ========================= -->
+
+  <section class="munterra_form_section">
+    <div class="munterra_form_container">
+      <div class="munterra_form_header">
+        <h1 class="munterra_form_title">Register for Agaram MUN 2025</h1>
+        <p class="munterra_form_subtitle">Please note: A 2% online transaction fee helps us cover payment gateway costs.
+        </p>
+      </div>
+
+      <form id="contact-form" method="post" novalidate>
+        <div class="munterra_form_grid">
+          <input type="hidden" name="event_name" value="Agaram MUN 2025">
+          <input type="text" name="your-name" placeholder="Full Name" required>
+          <input type="email" name="your-email" placeholder="Email Address" required>
+
+          <input type="tel" name="your-number" placeholder="Phone Number (10 digits)" pattern="\d{10}" required>
+          <input type="date" name="your-dob" placeholder="Date of Birth" required>
+
+          <input type="text" name="your-school" placeholder="School / College" required>
+          <input type="text" name="your-city" placeholder="City" required>
+
+          <input type="text" name="parents-name" placeholder="Parent's Name" required>
+          <input type="tel" name="parents-contact" placeholder="Parent's Contact (10 digits)" pattern="\d{10}" required>
+
+          <input type="text" name="portfolio-preference" placeholder="Portfolio Preference (if any)">
+          <input type="text" name="session-date" id="session-date" placeholder="Notes" required>
+
+          <!-- Committee Preferences -->
+          <select name="committee-preference-1" required>
+            <option value="" disabled selected>Committee Preference 1</option>
+
+            <option value="DISEC">DISEC — Blood Guns: Global Trade of Illegal Weapons</option>
+            <option value="UNSC">UNSC — Weaponization of AI in Military Strategies</option>
+            <option value="UNHRC">UNHRC — Rights to Fair Trial for Immigrants and Asylum Seekers</option>
+            <option value="UNW">UN Women — Legalisation of Right to Abortion and Right to Reproductive Justice</option>
+            <option value="LOK SABHA">Lok Sabha — Adoption and Marriage Rights for Same-Sex Couples</option>
+            <option value="CCC">CCC — Marvel vs DC</option>
+            <option value="IP">International Press — Journalism and Photography Division</option>
+          </select>
+
+          <select name="committee-preference-2">
+            <option value="" disabled selected>Committee Preference 2</option>
+            <option value="DISEC">DISEC — Blood Guns: Global Trade of Illegal Weapons</option>
+            <option value="UNSC">UNSC — Weaponization of AI in Military Strategies</option>
+            <option value="UNHRC">UNHRC — Rights to Fair Trial for Immigrants and Asylum Seekers</option>
+            <option value="UNW">UN Women — Legalisation of Right to Abortion and Right to Reproductive Justice</option>
+            <option value="LOK SABHA">Lok Sabha — Adoption and Marriage Rights for Same-Sex Couples</option>
+            <option value="CCC">CCC — Marvel vs DC</option>
+            <option value="IP">International Press — Journalism and Photography Division</option>
+          </select>
+
+          <select name="committee-preference-3">
+            <option value="" disabled selected>Committee Preference 3</option>
+            <option value="DISEC">DISEC — Blood Guns: Global Trade of Illegal Weapons</option>
+            <option value="UNSC">UNSC — Weaponization of AI in Military Strategies</option>
+            <option value="UNHRC">UNHRC — Rights to Fair Trial for Immigrants and Asylum Seekers</option>
+            <option value="UNW">UN Women — Legalisation of Right to Abortion and Right to Reproductive Justice</option>
+            <option value="LOK SABHA">Lok Sabha — Adoption and Marriage Rights for Same-Sex Couples</option>
+            <option value="CCC">CCC — Marvel vs DC</option>
+            <option value="IP">International Press — Journalism and Photography Division</option>
+          </select>
+
+        </div>
+
+        <div class="munterra_form_selectwrap">
+          <label>Food Preference</label>
+          <div class="munterra_food_choices">
+            <label><input type="radio" name="food-preference" value="Vegetarian" required> Vegetarian</label>
+            <label><input type="radio" name="food-preference" value="Non-Vegetarian" required> Non-Vegetarian</label>
+          </div>
+        </div>
+        <div class="munterra_form_accommodation">
+          <label>Accommodation</label>
+          <div class="munterra_accom_choices">
+            <label>
+              <input type="radio" name="accommodation" value="without" checked required>
+              Without accommodation (₹2,753)
+            </label>
+            <label>
+              <input type="radio" name="accommodation" value="with" required>
+              With accommodation (₹4,080)
+            </label>
+          </div>
+        </div>
+        <div class="munterra_form_terms">
+          <label>
+            <input type="checkbox" name="agree-terms" value="yes" required>
+            I agree to the <a href="Terms" target="_blank">Terms & Conditions</a>
+          </label>
+        </div>
+
+        <div class="munterra_form_cta">
+          <button type="submit" id="pay-now-submit-button">Pay Now</button>
+        </div>
+
+        <div id="form-message" class="form-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Razorpay checkout script -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+
+
+
+</body>
+<!-- ===== GLASS FOOTER ===== -->
+<!-- ===== GLASS FOOTER ===== -->
+<!-- ===== GLASS FOOTER ===== -->
+<footer class="footer-container" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="visually-hidden">Site Footer</h2>
+
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <!-- Left: About Section -->
+            <section class="footer-col footer-about" aria-labelledby="about-title">
+                <img src="assets/img/logo.svg" alt="Spirezen Logo" class="logofooter" />
+                <h3 id="about-title" class="visually-hidden">About Spirezen</h3>
+                <p class="footer-about-text">
+                    At Spirezen Enterprises, we inspire excellence through education,
+                    growth, and innovation. Founded with the mission to elevate minds
+                    and empower futures, our team is committed to redefining learning
+                    experiences in India and beyond.
+                </p>
+            </section>
+
+            <!-- Center: Quick Links (collapsible on small screens) -->
+            <nav class="footer-col footer-links" aria-labelledby="links-title">
+                <div class="links-head">
+                    <h4 id="links-title">QUICK LINKS</h4>
+                    <button class="links-toggle" aria-expanded="false" aria-controls="quick-links-list"
+                        aria-label="Toggle quick links">
+                        ▾
+                    </button>
+                </div>
+                <ul id="quick-links-list" class="quick-links" role="navigation">
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="about">ABOUT US</a></li>
+                    <li><a href="team">OUR TEAM</a></li>
+                    <li><a href="portfolio">PORTFOLIO</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+                    <li><a href="join">JOIN US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right: Address & Contact -->
+            <section class="footer-col footer-contact" aria-labelledby="contact-title">
+                <h4 id="contact-title">OUR CORPORATE ADDRESS</h4>
+                <address class="footer-address">
+                    SPIREZEN ENTERPRISES Pvt Ltd.<br />
+                    JS Bakers, Uliyampalayam,<br />
+                    Thondamuthur, Coimbatore, Tamil Nadu, India — 641109
+                </address>
+
+                <h4>MAIL US</h4>
+                <p>
+                    <a class="footer-email" href="mailto:spirecare@spirezenenterprises.com">
+                        spirecare@spirezenenterprises.com
+                    </a>
+                </p>
+
+                <div class="social-media" aria-label="Social links">
+                    <a class="social-link" href="https://www.instagram.com/spirezenenterprises" target="_blank"
+                        rel="noopener" aria-label="Instagram">
+                        <img src="assets/img/instatosvg.svg" alt="Instagram" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="Facebook">
+                        <img src="assets/img/facetosvg.svg" alt="Facebook" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="https://x.com/Spirezen" target="_blank" rel="noopener"
+                        aria-label="Twitter">
+                        <img src="assets/img/xtosvg.svg" alt="Twitter" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <img src="assets/img/linkedintosvg.svg" alt="LinkedIn" class="social-icon" />
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="current-year"></span>
+                <span class="highlight">SPIREZEN ENTERPRISES Pvt Ltd.</span>, ALL
+                RIGHTS RESERVED.
+            </p>
+            <button class="back-to-top" aria-label="Back to top">↑</button>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/thedalemunregis.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="https://cdn-in.pagesense.io/js/60056259301/13f70b01514e472b96a252ee37209a38.js"></script>
+
+</body>
+
+</html>

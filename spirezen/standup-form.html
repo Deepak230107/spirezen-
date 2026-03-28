@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Daily Standup - Spirezen Enterprises</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/indexstyle.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/standup-form.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="pro-nav" aria-label="Primary Navigation">
+        <div class="pro-nav__inner">
+            <!-- LEFT: Brand -->
+            <a href="index" class="pro-nav__brand" aria-label="Spirezen Home">SPIREZEN</a>
+
+            <!-- CENTER: Menu (desktop) -->
+            <ul class="pro-nav__menu" role="menubar">
+                <li role="none"><a role="menuitem" class="pro-nav__link" href="index">Home</a></li>
+
+                <li class="pro-has-dd" role="none">
+                    <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                        <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M7 10l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="pro-dd" role="menu">
+                        <a class="pro-dd__link" role="menuitem" href="munworkshop">Munterra</a>
+                        <a class="pro-dd__link" role="menuitem" href="digitalaesthetics">Digital Aesthetics </a>
+                    </div>
+                </li>
+
+                <li class="pro-has-dd" role="none">
+                    <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+                        Services
+                        <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M7 10l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="pro-dd" role="menu">
+                        <a class="pro-dd__link" role="menuitem" href="thedalemunclub">thedalemunclub</a>
+                        <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+                    </div>
+                </li>
+
+                <li class="pro-has-dd" role="none">
+                    <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+                        Portfolio
+                        <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M7 10l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="pro-dd" role="menu">
+                        <a class="pro-dd__link" role="menuitem" href="thedalemunclub">thedalemun</a>
+                        <a class="pro-dd__link" role="menuitem" href="thedalewordweft">thedalewordweft</a>
+                        <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+                    </div>
+                </li>
+
+                <li role="none"><a role="menuitem" class="pro-nav__link" href="about">About Us</a></li>
+
+                <li class="pro-has-dd" role="none">
+                    <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+                        Get in touch
+                        <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M7 10l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="pro-dd" role="menu">
+                        <a class="pro-dd__link" role="menuitem" href="career">Careers</a>
+                        <a class="pro-dd__link" role="menuitem" href="contact">Contact us</a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- RIGHT: Logo -->
+            <a href="index" class="pro-nav__logoWrap" aria-label="Spirezen Home">
+                <img src="assets/img/logo.svg" alt="" class="pro-nav__logo" />
+            </a>
+
+            <!-- Mobile trigger -->
+            <button class="pro-hamburger" id="proHamburger" aria-label="Open menu" aria-controls="proDrawer"
+                aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="pro-underline" aria-hidden="true"></div>
+    </nav>
+
+    <!-- ===== Overlay & Bottom Sheet MUST be direct children of <body> ===== -->
+    <div class="pro-overlay" id="proOverlay" hidden></div>
+
+    <aside class="pro-sheet" id="proDrawer" aria-hidden="true" aria-label="Mobile Menu">
+        <!-- Top bar for drag + close -->
+        <div class="pro-sheet__head">
+            <div class="pro-sheet__brand">
+                <img src="assets/img/logo.svg" class="pro-sheet__logo" alt="">
+                <strong class="pro-sheet__title">SPIREZEN</strong>
+            </div>
+            <button id="proClose" class="pro-sheet__close" aria-label="Close menu">✕</button>
+        </div>
+        <div class="pro-sheet__handle" aria-hidden="true"></div>
+
+        <!-- Menu Body -->
+        <nav class="pro-sheet__body" role="menu">
+            <!-- ✅ Home first -->
+            <a class="pro-sheet__item" href="index" role="menuitem">Home</a>
+
+            <details class="pro-sheet__acc" role="none">
+                <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Courses</summary>
+                <div class="pro-sheet__panel">
+                    <a class="pro-sheet__sub" href="munworkshop">Munterra</a>
+                    <a class="pro-sheet__sub" href="digitalaesthetics">Digital Aesthetics </a>
+                </div>
+            </details>
+
+            <details class="pro-sheet__acc" role="none">
+                <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Services</summary>
+                <div class="pro-sheet__panel">
+                    <a class="pro-sheet__sub" href="thedalewordweft">daleworldweft</a>
+                    <a class="pro-sheet__sub" href="digitalservices">thedalediginova</a>
+                </div>
+            </details>
+
+            <details class="pro-sheet__acc" role="none">
+                <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Portfolio</summary>
+                <div class="pro-sheet__panel">
+                    <a class="pro-sheet__sub" href="thedalemunclub">thedalemun</a>
+                    <a class="pro-sheet__sub" href="thedalewordweft">thedalewordweft</a>
+                    <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+                </div>
+            </details>
+
+            <a class="pro-sheet__item" href="about" role="menuitem">About Us</a>
+
+            <details class="pro-sheet__acc" role="none">
+                <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Get in touch</summary>
+                <div class="pro-sheet__panel">
+                    <a class="pro-sheet__sub" href="career">Careers</a>
+                    <a class="pro-sheet__sub" href="contact">Contact Us</a>
+                </div>
+            </details>
+        </nav>
+
+        <!-- Footer -->
+        <div class="pro-sheet__footer">
+            <a href="mailto:hello@spirezen.com" class="footer-link"> spirecare@spirezenenterprises.com</a>
+            <div class="footer-links">
+                <a href="about">About</a>
+                <span class="dot">•</span>
+                <a href="careers">Careers</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="standup-card">
+            <div class="standup-header">
+                <h1 class="standup-title">Daily Standup</h1>
+                <p class="standup-subtitle">Submit your daily progress report.</p>
+            </div>
+
+            <form class="standup-form" action="#" method="POST">
+                <!-- Date Input -->
+                <div class="form-group">
+                    <label for="standup-date" class="form-label">Submission Date</label>
+                    <input type="date" id="standup-date" name="date" class="form-input" required>
+                </div>
+
+                <!-- Q1 -->
+                <div class="form-group">
+                    <label for="q-completed" class="form-label">1. What have you completed today?</label>
+                    <textarea id="q-completed" name="completed" class="form-textarea" minlength="50"
+                        placeholder="List your completed tasks..." required></textarea>
+                </div>
+
+                <!-- Q2 -->
+                <div class="form-group">
+                    <label for="q-working" class="form-label">2. What are you currently working on?</label>
+                    <textarea id="q-working" name="working_on" class="form-textarea" minlength="50"
+                        placeholder="List your active tasks..." required></textarea>
+                </div>
+
+                <!-- Q3 -->
+                <div class="form-group">
+                    <label for="q-blockers" class="form-label">3. Any blockers?</label>
+                    <textarea id="q-blockers" name="blockers" class="form-textarea" minlength="50"
+                        placeholder="Describe any issues or type 'None'..." required></textarea>
+                </div>
+
+                <!-- Agreement -->
+                <div class="agreement-group">
+                    <input type="checkbox" id="agreement" name="agreement" class="checkbox-input" required>
+                    <label for="agreement" class="checkbox-label">
+                        I hereby declare that the above information is accurate and reflects my true work status for
+                        today.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Report</button>
+            </form>
+            <a href="index" class="btn-back">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- ===== GLASS FOOTER ===== -->
+    <footer class="footer-container" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="visually-hidden">Site Footer</h2>
+
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <!-- Left: About Section -->
+                <section class="footer-col footer-about" aria-labelledby="about-title">
+                    <img src="assets/img/logo.svg" alt="Spirezen Logo" class="logofooter" />
+                    <h3 id="about-title" class="visually-hidden">About Spirezen</h3>
+                    <p class="footer-about-text">
+                        At Spirezen Enterprises, we inspire excellence through education,
+                        growth, and innovation. Founded with the mission to elevate minds
+                        and empower futures, our team is committed to redefining learning
+                        experiences in India and beyond.
+                    </p>
+                </section>
+
+                <!-- Center: Quick Links (collapsible on small screens) -->
+                <nav class="footer-col footer-links" aria-labelledby="links-title">
+                    <div class="links-head">
+                        <h4 id="links-title">QUICK LINKS</h4>
+                        <button class="links-toggle" aria-expanded="false" aria-controls="quick-links-list"
+                            aria-label="Toggle quick links">
+                            ▾
+                        </button>
+                    </div>
+                    <ul id="quick-links-list" class="quick-links" role="navigation">
+                        <li><a href="index">HOME</a></li>
+                        <li><a href="about">ABOUT US</a></li>
+                        <li><a href="team">OUR TEAM</a></li>
+                        <li><a href="portfolio">PORTFOLIO</a></li>
+                        <li><a href="contact">CONTACT</a></li>
+                        <li><a href="join">JOIN US</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Right: Address & Contact -->
+                <section class="footer-col footer-contact" aria-labelledby="contact-title">
+                    <h4 id="contact-title">OUR CORPORATE ADDRESS</h4>
+                    <address class="footer-address">
+                        SPIREZEN ENTERPRISES Pvt Ltd.<br />
+                        JS Bakers, Uliyampalayam,<br />
+                        Thondamuthur, Coimbatore, Tamil Nadu, India — 641109
+                    </address>
+
+                    <h4>MAIL US</h4>
+                    <p>
+                        <a class="footer-email" href="mailto:spirecare@spirezenenterprises.com">
+                            spirecare@spirezenenterprises.com
+                        </a>
+                    </p>
+
+                    <div class="social-media" aria-label="Social links">
+                        <a class="social-link" href="https://www.instagram.com/spirezenenterprises" target="_blank"
+                            rel="noopener" aria-label="Instagram">
+                            <img src="assets/img/instatosvg.svg" alt="Instagram" class="social-icon" />
+                        </a>
+                        <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="Facebook">
+                            <img src="assets/img/facetosvg.svg" alt="Facebook" class="social-icon" />
+                        </a>
+                        <a class="social-link" href="https://x.com/Spirezen" target="_blank" rel="noopener"
+                            aria-label="Twitter">
+                            <img src="assets/img/xtosvg.svg" alt="Twitter" class="social-icon" />
+                        </a>
+                        <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <img src="assets/img/linkedintosvg.svg" alt="LinkedIn" class="social-icon" />
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="current-year"></span>
+                    <span class="highlight">SPIREZEN ENTERPRISES Pvt Ltd.</span>, ALL
+                    RIGHTS RESERVED.
+                </p>
+                <button class="back-to-top" aria-label="Back to top">↑</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/standup-form.js"></script>
+    <script src="https://cdn-in.pagesense.io/js/60056259301/13f70b01514e472b96a252ee37209a38.js"></script>
+
+</body>
+
+</html>
