@@ -23,6 +23,10 @@ const ROOT_DIR = isFlatStructure ? __dirname : path.join(__dirname, '../');
 console.log(`Running in ${isFlatStructure ? 'FLAT (Hostinger)' : 'NESTED (Local)'} mode. Root: ${ROOT_DIR}`);
 
 // Serve static files from ROOT_DIR for CSS/Images
+app.use((req, res, next) => {
+    console.log(`[${new Date().toLocaleTimeString()}] ${req.method} ${req.url}`);
+    next();
+});
 app.use(express.static(ROOT_DIR, { index: false, extensions: ['html'] }));
 
 app.use(session({

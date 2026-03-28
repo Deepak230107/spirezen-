@@ -1,0 +1,75 @@
+.legacy-counter-wrap {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+}
+
+.legacy-counter-wrap h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.legacy-counter-wrap .counter-sub {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.legacy-counter-wrap .counter-highlight {
+    /* Gradient text — matches site-wide --pro-grad accent */
+    background: var(--pro-grad, linear-gradient(90deg, #f3e3c3, #eec063));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.legacy-cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.legacy-card {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.legacy-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.legacy-card .card-num {
+    font-size: 3.5rem;
+    font-weight: 900;
+    /* Use site gradient at low opacity so it matches --pro-grad tone */
+    background: var(--pro-grad, linear-gradient(90deg, #f3e3c3, #eec063));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.25;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.legacy-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
