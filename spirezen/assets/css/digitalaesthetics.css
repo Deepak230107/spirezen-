@@ -434,8 +434,8 @@ a {
 
 .da-hero__grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -533,68 +533,31 @@ a {
   justify-content: center;
 }
 
-/* Abstract Glass Elements for Hero Visual */
+/* Single Glass Element for Hero Visual */
 .da-glass-card {
-  position: absolute;
-  background: rgba(5, 5, 5, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(5, 5, 5, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
 .vis-main {
-  width: 320px;
-  height: 420px;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4/5;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  animation: floatMain 6s ease-in-out infinite;
+  padding: 12px;
+  margin: 0 auto;
+  animation: floatHero 8s ease-in-out infinite;
 }
 
-.vis-float-1 {
-  width: 180px;
-  height: 120px;
-  top: 15%;
-  right: -5%;
-  z-index: 1;
-  animation: floatSecondary 7s ease-in-out infinite 1s;
-}
-
-.vis-float-2 {
-  width: 160px;
-  height: 160px;
-  bottom: 15%;
-  left: -10%;
-  z-index: 3;
-  animation: floatSecondary 8s ease-in-out infinite 2s;
-  background: linear-gradient(135deg, rgba(238, 193, 103, 0.1), rgba(0, 0, 0, 0.8));
-  border: 1px solid rgba(238, 193, 103, 0.2);
-}
-
-@keyframes floatMain {
-
-  0%,
-  100% {
-    transform: translate(-50%, -50%) translateY(0);
-  }
-
-  50% {
-    transform: translate(-50%, -50%) translateY(-15px);
-  }
-}
-
-@keyframes floatSecondary {
-
-  0%,
-  100% {
+@keyframes floatHero {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-20px);
   }

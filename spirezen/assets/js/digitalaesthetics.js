@@ -112,20 +112,48 @@
     });
   }
 
+  /* Hero Parallax Move Effect */
+  const heroGrid = document.querySelector('.da-hero__grid');
+  const heroVisual = document.querySelector('.vis-main');
+  const heroContent = document.querySelector('.da-hero__content');
+
+  if (heroGrid && heroVisual && heroContent) {
+    heroGrid.addEventListener('mousemove', (e) => {
+      const { clientX, clientY } = e;
+      const xPos = (clientX / window.innerWidth - 0.5) * 40;
+      const yPos = (clientY / window.innerHeight - 0.5) * 40;
+
+      gsap.to(heroVisual, {
+        duration: 1,
+        x: xPos,
+        y: yPos,
+        ease: 'power2.out'
+      });
+
+      gsap.to(heroContent, {
+        duration: 1.2,
+        x: -xPos * 0.3,
+        y: -yPos * 0.3,
+        ease: 'power2.out'
+      });
+    });
+
+    heroGrid.addEventListener('mouseleave', () => {
+      gsap.to([heroVisual, heroContent], {
+        duration: 1.5,
+        x: 0,
+        y: 0,
+        ease: 'elastic.out(1, 0.5)'
+      });
+    });
+  }
+
   /* FAQ Logic */
   const faqQuestions = document.querySelectorAll('.dw-faq__q');
   faqQuestions.forEach(q => {
     q.addEventListener('click', () => {
       const item = q.parentElement;
       const isOpen = item.classList.contains('dw-open');
-
-      // Optional: Close others (accordion style)
-      // const allItems = document.querySelectorAll('.dw-faq__item');
-      // allItems.forEach(i => {
-      //     i.classList.remove('dw-open');
-      //     const btn = i.querySelector('.dw-faq__q');
-      //     if(btn) btn.setAttribute('aria-expanded', 'false');
-      // });
 
       if (!isOpen) {
         item.classList.add('dw-open');
@@ -136,5 +164,4 @@
       }
     });
   });
-
 })();

@@ -71,11 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- 4. TESTIMONIAL CAROUSEL (Simple) ---
+    // --- 4. TESTIMONIAL CAROUSEL (Auto-Shift) ---
     const slides = document.querySelectorAll('.testimonial-slide');
     const prevBtn = document.querySelector('.carousel-prev');
     const nextBtn = document.querySelector('.carousel-next');
     let currentSlide = 0;
+    let autoShift;
 
     if (slides.length > 0 && prevBtn && nextBtn) {
         function showSlide(index) {
@@ -85,15 +86,29 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        nextBtn.addEventListener('click', () => {
+        function nextSlide() {
             currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
+        }
+
+        function resetAutoShift() {
+            clearInterval(autoShift);
+            autoShift = setInterval(nextSlide, 5000); // 5 seconds interval
+        }
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoShift();
         });
 
         prevBtn.addEventListener('click', () => {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
             showSlide(currentSlide);
+            resetAutoShift();
         });
+
+        // Initialize auto-shift
+        resetAutoShift();
     }
 
     // --- 5. FAQ TOGGLE (Enhancement to existing logic if needed) ---
