@@ -1,0 +1,137 @@
+:root{
+  --bg: #070707;
+  --panel: #0d0d0d;
+  --muted: #9b9b9b;
+  --text: #e8e6e3;
+  --gold: #d1a95f;
+  --accent: #e6c389;
+  --glass: rgba(255,255,255,0.06);
+  --maxwide: 1080px;
+  --container-padding: 28px;
+  --radius: 14px;
+  --shadow: 0 10px 40px rgba(0,0,0,0.75);
+  --transition: 220ms cubic-bezier(.2,.9,.3,1);
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b0b0b, #050505);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ========================= */
+/* BASE */
+/* ========================= */
+/* ========================= */
+/* LAP – SKILLEX STYLE */
+/* ========================= */
+
+.lap-skillex {
+  padding: 6rem 0;
+  background: radial-gradient(circle at top, #0b0b0b, #050505);
+}
+
+.container {
+  max-width: 1080px;
+  width: 90%;
+  margin: auto;
+}
+
+/* HERO */
+.lap-hero {
+  margin-bottom: 4rem;
+}
+
+.lap-hero-text h1 {
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  line-height: 1.05;
+}
+
+.lap-hero-text span {
+  color: var(--gold);
+}
+
+.tagline {
+  margin-top: 1rem;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+/* GRID */
+.lap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+/* CARD */
+.lap-card {
+  padding: 1.8rem;
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.02)
+  );
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 25px 60px rgba(0,0,0,.7);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.lap-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 35px 80px rgba(0,0,0,.9);
+}
+
+.lap-card h3 {
+  color: var(--gold);
+  margin-bottom: .8rem;
+}
+
+.lap-card p,
+.lap-card li {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.lap-card ul {
+  padding-left: 1rem;
+}
+
+.lap-card li {
+  margin-bottom: .4rem;
+}
+
+/* WIDE CARD */
+.lap-card.wide {
+  grid-column: span 2;
+}
+
+/* ACCENT */
+.lap-card.accent {
+  background: linear-gradient(
+    145deg,
+    rgba(209,169,95,.22),
+    rgba(255,255,255,.02)
+  );
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .lap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lap-card.wide {
+    grid-column: span 1;
+  }
+}

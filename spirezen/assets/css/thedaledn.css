@@ -1,0 +1,622 @@
+/* =========
+   RESET & BASE
+========= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.tdn-page {
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+/* Global section spacing */
+.tdn-section {
+  padding: 80px 0;
+}
+
+/* Main wrapper – 90% width on ALL screens */
+.tdn-wrap {
+  width: 90vw;                 /* <-- Occupies 90% of viewport width */
+  max-width: 1080px;           /* Nice readable max-width on large screens */
+  margin: 0 auto;
+  padding-inline: 0;           /* Avoid double padding with 90vw */
+}
+
+/* =========
+   GLOBAL TEXT
+========= */
+.tdn-eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+
+.tdn-section-title {
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 18px;
+}
+
+.tdn-body {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  opacity: 0.86;
+}
+
+/* =========
+   BUTTONS
+========= */
+.tdn-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.94rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
+}
+
+.tdn-btn span {
+  font-size: 1.02rem;
+  transform: translateY(1px);
+}
+
+.tdn-btn-primary {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 18px 50px rgba(255, 255, 255, 0.18);
+}
+
+.tdn-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(255, 255, 255, 0.28);
+}
+
+.tdn-btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.tdn-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* =========
+   HERO
+========= */
+.tdn-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(96px, 18vh, 140px);
+  padding-bottom: 110px;
+}
+
+.tdn-hero-glow-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.09), transparent 65%),
+    radial-gradient(circle at bottom, rgba(0, 0, 0, 0.9), transparent 40%);
+  pointer-events: none;
+}
+
+.tdn-hero-layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 6vw, 40px);
+  align-items: flex-start;
+}
+
+/* Left content */
+.tdn-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.tdn-hero-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+
+.tdn-hero-title {
+  font-size: clamp(2.4rem, 7vw, 3.8rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  line-height: 1.06;
+  margin-bottom: 22px;
+}
+
+.tdn-hero-sub {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  max-width: 32rem;
+  margin-bottom: 24px;
+}
+
+.tdn-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tdn-hero-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Right logo column */
+.tdn-hero-logo-col {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo with white gradient glow */
+.tdn-hero-logo-glow {
+  width: clamp(200px, 26vw, 320px);
+  aspect-ratio: 1 / 1;
+
+  mask-image: url("../img/thedalediginova.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.65) 0%,
+      rgba(255, 255, 255, 0.3) 32%,
+      rgba(255, 255, 255, 0.08) 60%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #181818;
+
+  opacity: 0.55;
+  filter: blur(1px) brightness(1.3);
+  mix-blend-mode: screen;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+
+  transition:
+    transform 0.9s ease,
+    opacity 0.7s ease,
+    filter 0.7s ease,
+    background 0.7s ease;
+}
+
+/* =========
+   ABOUT
+========= */
+.tdn-about-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tdn-about-left {
+  max-width: 640px;
+}
+
+.tdn-about-right {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 26px;
+}
+
+.tdn-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tdn-stat-main {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.tdn-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* =========
+   SERVICES
+========= */
+.tdn-section-intro {
+  max-width: 600px;
+  margin-top: 6px;
+}
+
+.tdn-service-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.tdn-service-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 24px 22px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tdn-service-card:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+}
+
+.tdn-service-number {
+  opacity: 0.6;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+}
+
+.tdn-service-name {
+  margin: 10px 0 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.tdn-service-body {
+  opacity: 0.9;
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* view more link */
+.tdn-service-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.tdn-service-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.tdn-service-link:visited {
+  color: #ffffff;
+}
+
+.tdn-service-link span {
+  font-size: 0.98rem;
+}
+
+.tdn-service-link:hover {
+  opacity: 1;
+  color: #eec063;
+}
+
+/* =========
+   PORTFOLIO
+========= */
+.tdn-portfolio-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.tdn-portfolio-card {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 70%);
+  padding: 22px 22px 20px;
+}
+
+.tdn-portfolio-name {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.tdn-portfolio-body {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  opacity: 0.88;
+  margin-bottom: 6px;
+}
+
+.tdn-portfolio-meta {
+  font-size: 0.86rem;
+  opacity: 0.7;
+}
+
+/* =========
+   WHY
+========= */
+.tdn-why-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.tdn-why-left {
+  max-width: 540px;
+}
+
+.tdn-why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  opacity: 0.86;
+}
+
+.tdn-why-list li::before {
+  content: "•";
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+/* =========
+   CONTACT
+========= */
+.tdn-contact-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.tdn-contact-note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.tdn-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* =========
+   GOLD ACCENT HEADINGS
+========= */
+.tdn-hero-kicker,
+.tdn-eyebrow,
+#services .tdn-eyebrow,
+#portfolio .tdn-eyebrow,
+#why .tdn-eyebrow,
+#contact .tdn-eyebrow {
+  color: #EEC063 !important;
+  opacity: 1 !important;
+}
+
+.tdn-eyebrow,
+.tdn-hero-kicker {
+  text-shadow: 0 0 6px rgba(238, 192, 99, 0.18);
+}
+
+/* =========
+   BREAKPOINTS
+========= */
+
+/* Small phones – tighten spacing, center hero */
+@media (max-width: 480px) {
+  .tdn-section {
+    padding: 60px 0;
+  }
+
+  .tdn-hero {
+    padding-top: 84px;
+    padding-bottom: 80px;
+  }
+
+  .tdn-hero-layout {
+    align-items: center;
+    text-align: center;
+  }
+
+  .tdn-hero-content {
+    align-items: center;
+  }
+
+  .tdn-hero-sub,
+  .tdn-hero-note {
+    max-width: 100%;
+  }
+
+  .tdn-hero-actions {
+    justify-content: center;
+  }
+
+  .tdn-hero-logo-glow {
+    width: 180px;
+    opacity: 0.38;
+    filter: blur(1.2px) brightness(1.12);
+  }
+
+  .tdn-about-right {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Up to tablets */
+@media (max-width: 767px) {
+  .tdn-wrap {
+    width: 90vw;    /* ensure 90% width on all small screens */
+  }
+
+  .tdn-service-card {
+    padding: 20px 18px;
+  }
+}
+
+/* Tablets (portrait & small landscape) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tdn-section {
+    padding: 90px 0;
+  }
+
+  .tdn-hero-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(32px, 5vw, 48px);
+  }
+
+  .tdn-hero-logo-col {
+    justify-content: flex-end;
+  }
+
+  .tdn-hero-logo-glow {
+    width: clamp(220px, 26vw, 280px);
+    opacity: 0.5;
+  }
+
+  .tdn-about-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .tdn-about-right {
+    grid-template-columns: 1fr;
+  }
+
+  .tdn-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tdn-portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tdn-why-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tdn-contact-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Desktop & large tablets landscape */
+@media (min-width: 1024px) {
+  .tdn-section {
+    padding: 96px 0;
+  }
+
+  .tdn-hero-layout {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(40px, 6vw, 70px);
+  }
+
+  .tdn-hero-logo-col {
+    justify-content: flex-end;
+  }
+
+  .tdn-about-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .tdn-about-right {
+    grid-template-columns: 1fr;
+  }
+
+  .tdn-service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tdn-portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tdn-why-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tdn-contact-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Orientation-specific tweaks */
+
+/* Portrait – a bit more vertical breathing room */
+@media (orientation: portrait) {
+  .tdn-hero {
+    padding-top: clamp(96px, 18vh, 140px);
+    padding-bottom: clamp(80px, 18vh, 120px);
+  }
+}
+
+/* Landscape – reduce vertical padding on small heights (iPads horizontal, small laptops) */
+@media (orientation: landscape) and (max-height: 700px) {
+  .tdn-section {
+    padding: 64px 0;
+  }
+
+  .tdn-hero {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .tdn-hero-title {
+    font-size: clamp(2.2rem, 4.6vw, 3.2rem);
+  }
+}
+/* FIX MOBILE TOP SPACING */
+@media (max-width: 640px) {
+  .tdn-hero {
+    padding-top: 40px !important;
+  }
+}
+@media (max-width: 768px) {
+  .tdn-section {
+    padding: 40px 0 !important;
+  }
+}

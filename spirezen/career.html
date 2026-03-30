@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Spirezen Enterprises.</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.svg">
+  <link rel="stylesheet" type="text/css" target="_blank" href="assets/css/join.css" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="pro-nav" aria-label="Primary Navigation">
+    <div class="pro-nav__inner">
+      <!-- LEFT: Brand -->
+      <a href="index" class="pro-nav__brand" aria-label="Spirezen Home">SPIREZEN</a>
+
+      <!-- CENTER: Menu (desktop) -->
+      <ul class="pro-nav__menu" role="menubar">
+        <li role="none"><a role="menuitem" class="pro-nav__link" href="index">Home</a></li>
+
+        <li class="pro-has-dd" role="none">
+          <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+            Courses
+            <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5" />
+            </svg>
+          </button>
+          <div class="pro-dd" role="menu">
+            <a class="pro-dd__link" role="menuitem" href="munworkshop">Munterra</a>
+            <a class="pro-dd__link" role="menuitem" href="digitalaesthetics">Digital Aesthetics </a>
+          </div>
+        </li>
+
+        <li class="pro-has-dd" role="none">
+          <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+            Services
+            <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5" />
+            </svg>
+          </button>
+          <div class="pro-dd" role="menu">
+            <a class="pro-dd__link" role="menuitem" href="thedalemunclub">thedalemunclub</a>
+            <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+          </div>
+        </li>
+
+        <li class="pro-has-dd" role="none">
+          <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+            Portfolio
+            <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5" />
+            </svg>
+          </button>
+          <div class="pro-dd" role="menu">
+            <a class="pro-dd__link" role="menuitem" href="thedalemunclub">thedalemun</a>
+            <a class="pro-dd__link" role="menuitem" href="thedalewordweft">thedalewordweft</a>
+            <a class="pro-dd__link" role="menuitem" href="digitalservices">thedalediginova</a>
+          </div>
+        </li>
+
+        <li role="none"><a role="menuitem" class="pro-nav__link" href="about">About Us</a></li>
+
+        <li class="pro-has-dd" role="none">
+          <button class="pro-nav__link pro-nav__btn" aria-haspopup="true" aria-expanded="false">
+            Get in touch
+            <svg class="pro-caret" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5" />
+            </svg>
+          </button>
+          <div class="pro-dd" role="menu">
+            <a class="pro-dd__link" role="menuitem" href="career">Careers</a>
+            <a class="pro-dd__link" role="menuitem" href="contact">Contact us</a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- RIGHT: Logo -->
+      <a href="index" class="pro-nav__logoWrap" aria-label="Spirezen Home">
+        <img src="assets/img/logo.svg" alt="" class="pro-nav__logo" />
+      </a>
+
+      <!-- Mobile trigger -->
+      <button class="pro-hamburger" id="proHamburger" aria-label="Open menu" aria-controls="proDrawer"
+        aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="pro-underline" aria-hidden="true"></div>
+  </nav>
+
+  <!-- ===== Overlay & Bottom Sheet MUST be direct children of <body> ===== -->
+  <div class="pro-overlay" id="proOverlay" hidden></div>
+
+  <aside class="pro-sheet" id="proDrawer" aria-hidden="true" aria-label="Mobile Menu">
+    <!-- Top bar for drag + close -->
+    <div class="pro-sheet__head">
+      <div class="pro-sheet__brand">
+        <img src="assets/img/logo.svg" class="pro-sheet__logo" alt="">
+        <strong class="pro-sheet__title">SPIREZEN</strong>
+      </div>
+      <button id="proClose" class="pro-sheet__close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="pro-sheet__handle" aria-hidden="true"></div>
+
+    <!-- Menu Body -->
+    <nav class="pro-sheet__body" role="menu">
+      <!-- ✅ Home first -->
+      <a class="pro-sheet__item" href="index" role="menuitem">Home</a>
+
+      <details class="pro-sheet__acc" role="none">
+        <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Courses</summary>
+        <div class="pro-sheet__panel">
+          <a class="pro-sheet__sub" href="munworkshop">Munterra</a>
+          <a class="pro-sheet__sub" href="digitalaesthetics">Digital Aesthetics </a>
+        </div>
+      </details>
+
+      <details class="pro-sheet__acc" role="none">
+        <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Services</summary>
+        <div class="pro-sheet__panel">
+          <a class="pro-sheet__sub" href="thedalewordweft">daleworldweft</a>
+          <a class="pro-sheet__sub" href="digitalservices">thedalediginova</a>
+        </div>
+      </details>
+
+      <details class="pro-sheet__acc" role="none">
+        <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Portfolio</summary>
+        <div class="pro-sheet__panel">
+          <a class="pro-sheet__sub" href="thedalemunclub">thedalemun</a>
+          <a class="pro-sheet__sub" href="thedalewordweft">thedalewordweft</a>
+          <a class="pro-sheet__sub" href="digitalservices">thedalediginova</a>
+        </div>
+      </details>
+
+      <a class="pro-sheet__item" href="about" role="menuitem">About Us</a>
+
+      <details class="pro-sheet__acc" role="none">
+        <summary class="pro-sheet__item" role="menuitem" aria-haspopup="true">Get in touch</summary>
+        <div class="pro-sheet__panel">
+          <a class="pro-sheet__sub" href="career">Careers</a>
+          <a class="pro-sheet__sub" href="contact">Contact Us</a>
+        </div>
+      </details>
+    </nav>
+
+    <!-- Footer -->
+    <div class="pro-sheet__footer">
+      <a href="mailto:hello@spirezen.com" class="footer-link"> spirecare@spirezenenterprises.com</a>
+      <div class="footer-links">
+        <a href="about">About</a>
+        <span class="dot">•</span>
+        <a href="careers">Careers</a>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="career_section career_heroDark">
+    <div class="career_wrap">
+      <div class="career_heroGrid">
+        <div class="career_heroCopy">
+          <span class="career_kicker">Spirezen Internship</span>
+          <h1 class="career_big">
+            Shape Your <span class="career_accent">Future</span><br />
+            With Real Experience
+          </h1>
+          <p class="career_lead">
+            Step into Spirezen’s dynamic ecosystem — where learning meets leadership.
+            Build real-world skills in communication, research, media, and strategy
+            while being mentored by passionate leaders.
+          </p>
+          <a href="#apply" class="career_cta">Apply Now</a>
+        </div>
+
+        <div class="career_heroImage">
+          <img src="assets/img/Fellowship.png" alt="Spirezen Internship" class="career_imgFit" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES SECTION ============ -->
+  <section class="career_section career_servicesDark">
+    <div class="career_wrap">
+      <div class="career_blockHead">
+        <span class="career_kicker">Why Join Us?</span>
+        <h2 class="career_h2">Opportunities at Spirezen</h2>
+        <p class="career_sub">
+          A structured internship designed to help you build skills, network with like-minded peers,
+          and step confidently into your career.
+        </p>
+      </div>
+
+      <div class="career_cardGrid">
+        <article class="career_glowCard">
+          <div class="career_iconBox">📚</div>
+          <h3 class="career_cardTitle">Diverse Skill Training</h3>
+          <p class="career_cardCopy">
+            Get trained across domains like research, communication, digital media, analysis, and presentation.
+          </p>
+        </article>
+
+        <article class="career_glowCard">
+          <div class="career_iconBox">🤝</div>
+          <h3 class="career_cardTitle">Collaborative Environment</h3>
+          <p class="career_cardCopy">
+            Work with an energetic community of interns and mentors — build, brainstorm, and grow together.
+          </p>
+        </article>
+
+        <article class="career_glowCard">
+          <div class="career_iconBox">💡</div>
+          <h3 class="career_cardTitle">Creative Freedom</h3>
+          <p class="career_cardCopy">
+            Experiment fearlessly. Bring fresh ideas to life and contribute to live projects with real impact.
+          </p>
+        </article>
+
+        <article class="career_glowCard">
+          <div class="career_iconBox">🚀</div>
+          <h3 class="career_cardTitle">Career Launchpad</h3>
+          <p class="career_cardCopy">
+            Gain practical experience that shapes your confidence, communication, and leadership skills.
+          </p>
+        </article>
+      </div>
+
+      <a href="#apply" class="career_secondaryCta">Explore More</a>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="career_section career_aboutDark">
+    <div class="career_wrap career_aboutGrid">
+      <div class="career_aboutImage">
+        <img src="assets/img/aboutus2.svg" alt="Spirezen Team" class="career_imgFit" />
+      </div>
+      <div class="career_aboutCopy">
+        <span class="career_kicker">About Spirezen</span>
+        <h2 class="career_h2">Who Are We?</h2>
+        <p class="career_sub">
+          Spirezen is a forward-thinking platform empowering students and graduates to elevate their skills.
+          We provide structured mentorship, real project experience, and a collaborative ecosystem that
+          bridges learning and leadership.
+        </p>
+
+        <div class="career_bullets">
+          <div class="career_bullet"><span>✓</span> Professional Training</div>
+          <div class="career_bullet"><span>✓</span> Skill-building Environment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORM SECTION ============ -->
+  <section id="apply" class="career_section career_formDark">
+    <div class="career_wrap">
+      <h2 class="career_h2 center">Apply for the Spirezen Internship</h2>
+
+      <div class="career_formShell">
+        <form class="career_formGrid" method="post"
+          action="https://script.google.com/macros/s/AKfycbz4Bb-Uh7kRYC76lEc-aViOmNMDG4kCmmX_1gB937C-msfLvd5KzIYctrsHwFztXNt0/exec"
+          name="contact-form" novalidate>
+
+          <!-- Row 1 -->
+          <input class="career_field career_inp career_name" type="text" name="your-name" placeholder="Full Name"
+            required pattern="[A-Za-z\s\.,'-]+" />
+
+          <input class="career_field career_inp career_age" type="number" name="your-age" placeholder="Age" required
+            min="13" max="65" />
+
+          <input class="career_field career_inp career_phone" type="tel" name="your-number" placeholder="Phone" required
+            pattern="[0-9]{7,15}" />
+
+          <!-- Row 2 -->
+          <input class="career_field career_inp career_email" type="email" name="your-email" placeholder="Email"
+            required />
+
+          <!-- Row 3 -->
+          <label class="career_field career_label career_labelTeam" for="career_team">
+            Which team would you like to be part of:
+          </label>
+          <select class="career_field career_inp career_select career_team" name="inquiry-type" id="career_team"
+            required>
+            <option value="">Please Select</option>
+            <option>Graphic Designer</option>
+            <option>Research & Development</option>
+            <option>Video Editor</option>
+            <option>Web developer</option>
+            <option>Marketing</option>
+            <option>Administration</option>
+            <option>HR</option>
+            <option>PRO</option>
+            <option>1 Month Internship</option>
+          </select>
+
+          <!-- Row 4 -->
+          <textarea class="career_field career_textarea career_aboutYou" name="message" rows="5"
+            placeholder="Tell us more about yourself and why you'd like to join!" required></textarea>
+
+          <!-- Row 5 -->
+          <button class="career_field career_btn" type="submit">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+<!-- ===== GLASS FOOTER ===== -->
+<!-- ===== GLASS FOOTER ===== -->
+<!-- ===== GLASS FOOTER ===== -->
+<footer class="footer-container" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="visually-hidden">Site Footer</h2>
+
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <!-- Left: About Section -->
+            <section class="footer-col footer-about" aria-labelledby="about-title">
+                <img src="assets/img/logo.svg" alt="Spirezen Logo" class="logofooter" />
+                <h3 id="about-title" class="visually-hidden">About Spirezen</h3>
+                <p class="footer-about-text">
+                    At Spirezen Enterprises, we inspire excellence through education,
+                    growth, and innovation. Founded with the mission to elevate minds
+                    and empower futures, our team is committed to redefining learning
+                    experiences in India and beyond.
+                </p>
+            </section>
+
+            <!-- Center: Quick Links (collapsible on small screens) -->
+            <nav class="footer-col footer-links" aria-labelledby="links-title">
+                <div class="links-head">
+                    <h4 id="links-title">QUICK LINKS</h4>
+                    <button class="links-toggle" aria-expanded="false" aria-controls="quick-links-list"
+                        aria-label="Toggle quick links">
+                        ▾
+                    </button>
+                </div>
+                <ul id="quick-links-list" class="quick-links" role="navigation">
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="about">ABOUT US</a></li>
+                    <li><a href="team">OUR TEAM</a></li>
+                    <li><a href="portfolio">PORTFOLIO</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+                    <li><a href="join">JOIN US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right: Address & Contact -->
+            <section class="footer-col footer-contact" aria-labelledby="contact-title">
+                <h4 id="contact-title">OUR CORPORATE ADDRESS</h4>
+                <address class="footer-address">
+                    SPIREZEN ENTERPRISES Pvt Ltd.<br />
+                    JS Bakers, Uliyampalayam,<br />
+                    Thondamuthur, Coimbatore, Tamil Nadu, India — 641109
+                </address>
+
+                <h4>MAIL US</h4>
+                <p>
+                    <a class="footer-email" href="mailto:spirecare@spirezenenterprises.com">
+                        spirecare@spirezenenterprises.com
+                    </a>
+                </p>
+
+                <div class="social-media" aria-label="Social links">
+                    <a class="social-link" href="https://www.instagram.com/spirezenenterprises" target="_blank"
+                        rel="noopener" aria-label="Instagram">
+                        <img src="assets/img/instatosvg.svg" alt="Instagram" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="Facebook">
+                        <img src="assets/img/facetosvg.svg" alt="Facebook" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="https://x.com/Spirezen" target="_blank" rel="noopener"
+                        aria-label="Twitter">
+                        <img src="assets/img/xtosvg.svg" alt="Twitter" class="social-icon" />
+                    </a>
+                    <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <img src="assets/img/linkedintosvg.svg" alt="LinkedIn" class="social-icon" />
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="current-year"></span>
+                <span class="highlight">SPIREZEN ENTERPRISES Pvt Ltd.</span>, ALL
+                RIGHTS RESERVED.
+            </p>
+            <button class="back-to-top" aria-label="Back to top">↑</button>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/announscript.js"></script>
+<script src="assets/js/cardscript.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/join.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="https://cdn-in.pagesense.io/js/60056259301/13f70b01514e472b96a252ee37209a38.js"></script>
+
+</html>

@@ -1,0 +1,268 @@
+/* =========================
+   MUNTERRA WORKSHOP FORM — Fixed & Aligned with Markup
+   ========================= */
+
+/* Section wrapper */
+.munterra_form_section,
+.munterra_form_section { /* fallback if either spelling appears */
+  padding: clamp(40px, 5vw, 80px) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0a;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Container */
+.munterra_form_container {
+  box-sizing: border-box;
+  width: clamp(320px, 90%, 1100px);
+  background: #0e0e0e;
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.munterra_form_header {
+  text-align: left;
+  margin-bottom: clamp(18px, 3vw, 32px);
+}
+.munterra_form_title {
+  font-size: clamp(1.6rem, 2.5vw, 2.6rem);
+  margin: 0 0 8px 0;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.munterra_form_subtitle,
+#form-subtitle { /* style both class and id in case you switch to id */
+  color: #cfcfcf;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  margin: 0;
+}
+
+/* Grid Layout */
+.munterra_form_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px 18px;
+  margin-bottom: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Inputs & Selects */
+.munterra_form_grid input,
+.munterra_form_grid select,
+.munterra_form_grid textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.98rem;
+  transition: all 0.18s ease;
+  box-sizing: border-box;
+}
+
+.munterra_form_grid input::placeholder,
+.munterra_form_grid textarea::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.munterra_form_grid input:focus,
+.munterra_form_grid select:focus,
+.munterra_form_grid textarea:focus {
+  border-color: #eec063;
+  background: #0f0f0f;
+  outline: none;
+}
+
+/* Date input fix: show native clear on desktop */
+.munterra_form_grid input[type="date"] {
+  padding-left: 12px;
+}
+
+/* Dropdown icon */
+.munterra_form_grid select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Radio / Choices groups base */
+.munterra_form_selectwrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+.munterra_form_selectwrap label,
+.munterra_form_accommodation > label {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Food preference radios */
+.munterra_food_choices,
+.munterra_accom_choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-left: 8px;
+  align-items: center;
+}
+
+/* Radio label styling */
+.munterra_food_choices label,
+.munterra_accom_choices label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #e6e6e6;
+  font-size: 0.95rem;
+}
+
+/* Make radio inputs easier to see */
+.munterra_food_choices input[type="radio"],
+.munterra_accom_choices input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #eec063; /* modern browsers will colour the radio */
+}
+
+/* Accommodation block */
+.munterra_form_accommodation {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.munterra_form_accommodation label {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+/* Terms checkbox */
+.munterra_form_terms {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+.munterra_form_terms a {
+  color: #eec063;
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.munterra_form_cta {
+  margin-top: 20px;
+  text-align: center;
+}
+#pay-now-submit-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #f3e3c3, #eec063);
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+  min-width: 160px;
+}
+#pay-now-submit-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+#pay-now-submit-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
+}
+
+/* Message Text */
+.form-message {
+  margin-top: 14px;
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Small visual helpers */
+.munterra_form_grid .small {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* =========================
+   RESPONSIVE TUNING
+   ========================= */
+
+/* Phones (≤ 600px) */
+@media (max-width: 600px) {
+  .munterra_form_container {
+    width: 94%;
+    padding: 20px 14px;
+    border-radius: 12px;
+  }
+  .munterra_form_title {
+    font-size: 1.6rem;
+  }
+  .munterra_form_grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  #pay-now-submit-button {
+    width: 100%;
+    font-size: 0.98rem;
+    padding: 12px;
+  }
+  .munterra_food_choices,
+  .munterra_accom_choices {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+  }
+}
+
+/* Tablets (601–1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .munterra_form_container {
+    width: 92%;
+    padding: 28px 22px;
+  }
+  .munterra_form_grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+/* Large Desktops (≥1100px) */
+@media (min-width: 1100px) {
+  .munterra_form_container {
+    width: 1100px;
+    padding: 48px;
+  }
+}

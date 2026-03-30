@@ -1,0 +1,169 @@
+/* Container sizing + centering (scoped) */
+.terms-section {
+  max-width: 1100px;           /* large screens constraint */
+  margin: 32px auto;          /* centered block */
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Responsive width switch: 90% under 1100px */
+@media (max-width: 1100px) {
+  .terms-section {
+    width: 90%;
+    margin: 24px auto;
+    padding: 18px;
+  }
+}
+
+/* Title block */
+.terms-title {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 6px 8px;
+}
+
+.terms-title h1 {
+  margin: 0;
+  line-height: 1.05;
+  font-size: clamp(20px, 2.4vw, 28px); /* fluid title size */
+  letter-spacing: -0.2px;
+  color: #fff;
+}
+
+.terms-title .terms-updated {
+  margin: 6px 0 0;
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #fff;
+}
+
+/* Clause card (consistent look) */
+.terms-clause {
+  background: #7d7d7d0e;
+  padding: clamp(14px, 2.2vw, 26px);
+  margin-bottom: clamp(12px, 1.6vw, 24px);
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.04);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* subtle lift on wider screens for polish */
+@media (min-width: 900px) {
+  .terms-clause:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(2,6,23,0.06);
+  }
+}
+
+/* Headings and text (fluid but readable) */
+.terms-clause h2 {
+  margin: 0 0 10px 0;
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: #e8aa56;
+  line-height: 1.18;
+}
+
+.terms-clause h3 {
+  margin: 12px 0 6px 0;
+  font-size: clamp(14px, 1.4vw, 16px);
+  color: #e8aa56;
+}
+
+/* Paragraphs and lists */
+.terms-clause p,
+.terms-clause ol,
+.terms-clause li {
+  color: #fff;
+  font-size: clamp(14px, 1.3vw, 16px);
+  line-height: 1.6;
+}
+
+.terms-clause ol {
+  margin: 8px 0 0 20px;
+  padding: 0;
+}
+
+/* Highlight box */
+.terms-highlight {
+  border-left: 4px solid #e8aa56;
+  color: #fff;
+  padding: 12px 14px;
+  background: rgba(147, 147, 147, 0.05);
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: clamp(13px, 1.2vw, 15px);
+}
+
+/* muted text */
+.terms-muted {
+  color: #fff;
+  font-size: clamp(13px, 1.1vw, 14px);
+  margin: 8px 0;
+}
+
+/* Contact chips: responsive grid */
+.terms-contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.terms-chip {
+  background: #e8aa56;
+  color: #0f172a;
+  padding: 8px 12px;
+  border-radius: 999px;
+  justify-self: start;
+  font-size: clamp(13px, 1.1vw, 14px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Smaller screens: tighter spacing and readable line lengths */
+@media (max-width: 420px) {
+  .terms-section {
+    margin: 18px auto;
+    padding: 14px;
+  }
+  .terms-title h1 {
+    font-size: clamp(18px, 6.4vw, 22px);
+  }
+  .terms-clause {
+    padding: 14px;
+    border-radius: 10px;
+  }
+  .terms-chip {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+}
+
+/* Landscape-specific tweaks for small devices (phones/tablets in landscape) */
+@media (max-width: 900px) and (orientation: landscape) {
+  .terms-section {
+    width: 94%;
+    margin: 14px auto;
+  }
+  .terms-title h1 {
+    font-size: clamp(18px, 3.2vw, 24px);
+  }
+  .terms-clause {
+    padding: 12px;
+    margin-bottom: 14px;
+  }
+  .terms-clause h2 {
+    font-size: clamp(15px, 2.6vw, 18px);
+  }
+  .terms-clause ol { margin-left: 18px; }
+}
+
+/* Accessibility: focus outlines for keyboard users (scoped) */
+.terms-section a:focus,
+.terms-section button:focus {
+  outline: 3px solid rgba(11,91,255,0.12);
+  outline-offset: 3px;
+}
