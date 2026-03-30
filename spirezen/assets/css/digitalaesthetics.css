@@ -1034,6 +1034,21 @@ a {
   background: transparent !important;
 }
 
+.dw-faq.center-align {
+  text-align: center;
+}
+
+.dw-faq.center-align .da-title-underline::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dw-faq.center-align .dw-faq__item {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .dw-faq__heading {
   margin-bottom: 32px;
 }

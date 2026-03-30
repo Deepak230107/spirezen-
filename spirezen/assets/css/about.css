@@ -127,15 +127,19 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 10px;
-  min-height: clamp(260px, 30vw, 300px);
-  padding: clamp(16px, 2.5vw, 22px);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  gap: 12px;
+  min-height: clamp(280px, 32vw, 340px);
+  padding: clamp(20px, 3vw, 30px);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   text-decoration: none;
   color: #f5f7fb;
   overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   isolation: isolate;
 }
 
@@ -153,19 +157,25 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(232, 170, 86, 0.2));
+  transition: transform 0.4s ease;
 }
 
 /* Hover State */
 @media (hover:hover) {
-
-  .section-services .card:hover,
-  .section-services .card:focus-visible {
-    border-color: rgba(232, 170, 86, .45);
+  .section-services .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(232, 170, 86, 0.5);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(232, 170, 86, 0.15);
   }
 
-  .section-services .card:hover::before,
-  .section-services .card:focus-visible::before {
-    box-shadow: inset 0 0 0 1px rgba(232, 170, 86, .45), inset 0 -26px 38px rgba(0, 0, 0, 0.25);
+  .section-services .card:hover .card-logo img {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .section-services .card:hover .card-title {
+    color: #e8aa56;
   }
 }
 
